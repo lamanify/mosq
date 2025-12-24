@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: "Soalan Lazim (FAQ) | MOSQ",
     description:
         "Jawapan kepada soalan lazim mengenai perkhidmatan bina laman web masjid percuma oleh MOSQ.",
+    alternates: {
+        canonical: "/soalan-lazim",
+    },
 };
 
 export default function SoalanLazimPage() {

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { LinkButton } from "@/components/ui/Button";
@@ -66,6 +67,12 @@ const features = [
       "Teknologi moden menjamin kelajuan akses dan keselamatan data masjid anda.",
   },
 ];
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   const jsonLd = {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: "Kenapa Perlu Website Masjid | MOSQ",
     description:
         "5 sebab utama mengapa masjid memerlukan laman web rasmi. Tingkatkan pengurusan, kutipan derma, dan hebahan maklumat.",
+    alternates: {
+        canonical: "/kenapa-perlu",
+    },
 };
 
 export default function KenapaPerluPage() {

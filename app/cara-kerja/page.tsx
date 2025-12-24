@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description:
         "Ketahui bagaimana MOSQ menyediakan laman web masjid percuma. Tiga langkah mudah: isi borang, data diproses, dan website masjid siap.",
     keywords: ["cara buat website masjid", "proses pendaftaran masjid online"],
+    alternates: {
+        canonical: "/cara-kerja",
+    },
 };
 
 const steps = [

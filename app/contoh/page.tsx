@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: "Contoh Website Masjid | MOSQ",
     description:
         "Lihat galeri dan contoh laman web masjid yang telah dibina menggunakan platform MOSQ.",
+    alternates: {
+        canonical: "/contoh",
+    },
 };
 
 export default function ContohPage() {
