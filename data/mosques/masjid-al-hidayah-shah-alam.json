@@ -1,0 +1,54 @@
+{
+  "slug": "masjid-al-hidayah-shah-alam",
+  "namaMasjid": "Masjid Al-Hidayah",
+  "alamatPenuh": "No. 1, Jalan Masjid Al-Hidayah, Seksyen 7",
+  "bandar": "Shah Alam",
+  "negeri": "Selangor",
+  "telefon": "03-5512 3456",
+  "emel": "masjid.alhidayah@example.com",
+  "namaImamAtauAJK": "Ustaz Ahmad bin Abdullah",
+  "pengenalan": "Masjid Al-Hidayah merupakan pusat ibadat dan aktiviti keagamaan utama bagi penduduk Seksyen 7, Shah Alam dan kawasan sekitarnya. Masjid ini menyediakan pelbagai kemudahan untuk jemaah dan komuniti setempat.",
+  "sejarahMasjid": "Masjid Al-Hidayah telah ditubuhkan pada tahun 1995 sebagai surau kecil untuk memenuhi keperluan penduduk awal di Seksyen 7, Shah Alam. Seiring dengan pertambahan penduduk, surau ini telah dinaik taraf menjadi masjid pada tahun 2005. Kini, Masjid Al-Hidayah dapat menampung sehingga 2,000 jemaah dan telah menjadi pusat kegiatan keagamaan yang aktif dalam komuniti.",
+  "visiMisi": "Menjadi pusat kecemerlangan Islam yang membina ummah berilmu, beramal dan bertakwa. Kami komited untuk menyediakan perkhidmatan keagamaan yang berkualiti dan menjadi platform pembangunan rohani serta intelektual untuk seluruh komuniti.",
+  "waktuSolat": {
+    "subuh": "5:45 AM",
+    "zohor": "1:15 PM",
+    "asar": "4:30 PM",
+    "maghrib": "7:25 PM",
+    "isyak": "8:40 PM"
+  },
+  "senaraiAktiviti": [
+    {
+      "nama": "Kuliah Subuh",
+      "hari": "Setiap Ahad",
+      "masa": "6:30 AM - 7:30 AM",
+      "keterangan": "Kuliah mingguan selepas solat Subuh membincangkan pelbagai topik keagamaan."
+    },
+    {
+      "nama": "Kelas Al-Quran Kanak-kanak",
+      "hari": "Sabtu & Ahad",
+      "masa": "9:00 AM - 11:00 AM",
+      "keterangan": "Kelas pembelajaran Al-Quran untuk kanak-kanak berumur 5-12 tahun."
+    },
+    {
+      "nama": "Majlis Tahlil",
+      "hari": "Setiap Malam Jumaat",
+      "masa": "8:30 PM - 9:30 PM",
+      "keterangan": "Majlis tahlil dan doa mingguan untuk seluruh jemaah."
+    },
+    {
+      "nama": "Kelas Fardhu Ain Dewasa",
+      "hari": "Setiap Selasa",
+      "masa": "8:00 PM - 9:00 PM",
+      "keterangan": "Kelas pembelajaran asas Islam untuk dewasa yang baru mempelajari agama."
+    },
+    {
+      "nama": "Ceramah Maghrib",
+      "hari": "Setiap Rabu",
+      "masa": "Selepas Maghrib",
+      "keterangan": "Ceramah singkat selepas solat Maghrib oleh ustaz jemputan."
+    }
+  ],
+  "googleMapsLink": "https://maps.google.com/?q=Masjid+Al-Hidayah+Shah+Alam",
+  "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1234567890!2d101.5300000!3d3.0700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMDQnMTIuMCJOIDEwMcKwMzEnNDguMCJF!5e0!3m2!1sen!2smy!4v1234567890"
+}

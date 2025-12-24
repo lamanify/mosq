@@ -1,0 +1,330 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Colors */
+  --background: #050505;
+  --foreground: #ffffff;
+
+  /* Gold Palette - Premium & Metallic */
+  --gold: #C9A24D;
+  --gold-light: #E5C573;
+  --gold-dark: #9F7F35;
+
+  /* Font Variables mapped from next/font */
+  --font-inter: var(--font-inter);
+  --font-sora: var(--font-sora);
+
+  /* SaaS Gradients */
+  --gradient-gold: linear-gradient(135deg, #E5C573 0%, #C9A24D 100%);
+  --gradient-gold-text: linear-gradient(to right, #FDE68A, #CA8A04);
+  --gradient-dark: linear-gradient(to bottom, #050505, #0A0A0A);
+
+  /* UI Elements */
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover: rgba(255, 255, 255, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
+  /* Typography Configuration */
+  --font-display: var(--font-sora), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-out forwards;
+  --animate-slide-up: slideUp 0.5s ease-out forwards;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(201, 162, 77, 0.1);
+    }
+
+    to {
+      box-shadow: 0 0 20px rgba(201, 162, 77, 0.3);
+    }
+  }
+}
+
+/* Base Typography Rules */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Headings: Sora (Display) */
+  h1 {
+    @apply font-display font-bold text-5xl md:text-7xl leading-[1.15] tracking-[0.01em];
+  }
+
+  h2 {
+    @apply font-display font-bold text-4xl md:text-5xl leading-[1.15];
+  }
+
+  h3 {
+    @apply font-display font-semibold text-2xl md:text-3xl leading-[1.15];
+  }
+
+  h4 {
+    @apply font-display font-semibold text-xl md:text-2xl leading-[1.15];
+  }
+
+  /* Body: Inter (Sans) */
+  p {
+    @apply font-sans text-base text-gray-400 max-w-[65ch];
+    line-height: 1.75;
+    /* Strict rule: 1.6 - 1.75 */
+    margin-bottom: 1.5rem;
+    /* Strict rule: 1.25 - 1.5rem */
+  }
+}
+
+/* Utilities */
+.text-gradient-white {
+  background: linear-gradient(to bottom, #FFFFFF, #A3A3A3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(201, 162, 77, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* ====================================
+   Premium Text Animations
+   ==================================== */
+
+/* Reveal on load animation */
+.reveal-on-load {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes revealSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays */
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.35s;
+}
+
+.stagger-4 {
+  animation-delay: 0.5s;
+}
+
+.stagger-5 {
+  animation-delay: 0.65s;
+}
+
+.stagger-6 {
+  animation-delay: 0.8s;
+}
+
+/* Text shimmer effect for gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(90deg,
+      #FDE68A 0%,
+      #C9A24D 25%,
+      #E5C573 50%,
+      #C9A24D 75%,
+      #FDE68A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Fade in from bottom animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blur reveal animation */
+.blur-reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+  animation: blurReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes blurReveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* Scale fade animation */
+.scale-fade-in {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: scaleFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Letter spacing animation for headings */
+.animate-tracking {
+  animation: trackingExpand 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes trackingExpand {
+  0% {
+    letter-spacing: -0.05em;
+    opacity: 0;
+  }
+
+  100% {
+    letter-spacing: 0.01em;
+    opacity: 1;
+  }
+}
+
+/* Floating animation for decorative elements */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse glow effect */
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(201, 162, 77, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(201, 162, 77, 0.6);
+  }
+}
