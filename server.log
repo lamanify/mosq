@@ -18,3 +18,12 @@ Image with src "https://res.cloudinary.com/lamanify/image/upload/v1766550864/Mos
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
  GET / 200 in 5.9s (compile: 4.8s, render: 1119ms)
  GET / 200 in 330ms (compile: 8ms, render: 322ms)
+ GET / 200 in 1482ms (compile: 241ms, render: 1241ms)
+ GET / 200 in 1254ms (compile: 5ms, render: 1248ms)
+ GET / 200 in 278ms (compile: 6ms, render: 272ms)
+Image with src "https://res.cloudinary.com/lamanify/image/upload/v1766550864/Mosq_4_g7urbn.webp" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET / 200 in 1544ms (compile: 673ms, render: 871ms)
+ GET / 200 in 271ms (compile: 9ms, render: 262ms)
+ GET / 200 in 303ms (compile: 5ms, render: 297ms)
+ GET / 200 in 304ms (compile: 21ms, render: 283ms)
