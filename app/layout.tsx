@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | MOSQ",
   },
   description:
-    "Bina website masjid profesional dalam 5 minit. Percuma seumur hidup. Tanpa koding, tanpa caj tersembunyi. Inisiatif digital untuk ummah. Dapatkan jadual solat dan maklumat aktiviti masjid terkini.",
+    "Bina website masjid profesional dalam 5 minit. Percuma seumur hidup. Inisiatif CSR digital oleh Lamanify untuk ummah. Tanpa koding, lengkap dengan jadual solat.",
   keywords: [
     "laman web masjid",
     "website masjid percuma",
@@ -30,7 +31,10 @@ export const metadata: Metadata = {
     "jadual solat digital",
     "waktu solat malaysia",
     "aktiviti masjid",
-    "sumbangan masjid online"
+    "sumbangan masjid online",
+    "Lamanify",
+    "CSR",
+    "Inisiatif Digital"
   ],
   authors: [{ name: "MOSQ Team", url: "https://mosq.io" }],
   creator: "MOSQ Team",
@@ -67,7 +71,7 @@ export const metadata: Metadata = {
     title: "MOSQ | Platform Website Masjid No.1 Malaysia",
     description: "Bina website masjid profesional dalam 5 minit. Percuma seumur hidup.",
     images: ["https://res.cloudinary.com/lamanify/image/upload/v1766570876/Screenshot_6_cf7tt6.webp"],
-    creator: "@mosq_io", // Placeholder if not strictly defined, or remove if unwanted
+    creator: "@mosq_io",
   },
   robots: {
     index: true,
@@ -81,11 +85,9 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // google: "google-site-verification-code", // Add actual code if available
+    // google: "google-site-verification-code",
   },
 };
-
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export default function RootLayout({
   children,
