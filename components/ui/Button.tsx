@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
 }
 
-interface LinkButtonProps {
+interface LinkButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     href: string;
     variant?: "primary" | "secondary" | "gold";
     size?: "sm" | "md" | "lg";
@@ -55,11 +55,13 @@ export function LinkButton({
     size = "md",
     className = "",
     children,
+    ...props
 }: LinkButtonProps) {
     return (
         <Link
             href={href}
             className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+            {...props}
         >
             {children}
         </Link>

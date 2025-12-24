@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: "https://res.cloudinary.com/lamanify/image/upload/v1766570820/Mosq_5_cuhs4t.webp",
+  },
   alternates: {
     canonical: "/",
   },
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "MOSQ",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://res.cloudinary.com/lamanify/image/upload/v1766570876/Screenshot_6_cf7tt6.webp",
         width: 1200,
         height: 630,
         alt: "MOSQ Platform - Website Masjid Percuma",
@@ -63,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MOSQ | Platform Website Masjid No.1 Malaysia",
     description: "Bina website masjid profesional dalam 5 minit. Percuma seumur hidup.",
-    images: ["/og-image.jpg"],
+    images: ["https://res.cloudinary.com/lamanify/image/upload/v1766570876/Screenshot_6_cf7tt6.webp"],
     creator: "@mosq_io", // Placeholder if not strictly defined, or remove if unwanted
   },
   robots: {
@@ -82,6 +85,8 @@ export const metadata: Metadata = {
   },
 };
 
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,11 +94,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ms" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+      </head>
       <body
         className={`${inter.variable} ${sora.variable} antialiased bg-black text-white selection:bg-gold selection:text-black`}
         suppressHydrationWarning
       >
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

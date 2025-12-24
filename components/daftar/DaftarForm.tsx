@@ -39,11 +39,7 @@ export default function DaftarForm() {
         setErrorMessage("");
 
         try {
-            const webhookUrl = process.env.NODE_ENV === "development"
-                ? "https://n8n.automation.lamanify.com/webhook-test/e38415c4-1827-40f8-9a10-82f9a313876c"
-                : "https://n8n.automation.lamanify.com/webhook/e38415c4-1827-40f8-9a10-82f9a313876c";
-
-            const response = await fetch(webhookUrl, {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -69,10 +65,13 @@ export default function DaftarForm() {
                 telefon: "",
                 emel: "",
             });
-        } catch (error) {
-            console.error("Submission error:", error);
+        } catch (error: any) {
+            console.error("Submission error:", typeof error);
             setSubmitStatus("error");
-            setErrorMessage("Maaf, terdapat masalah semasa menghantar permohonan. Sila cuba lagi atau hubungi kami terus via WhatsApp.");
+
+            // For fetch, we need to check the response object if it wasn't caught by 'response.ok' check
+            // But here the error is caught after throw new Error
+            setErrorMessage("Maaf, terdapat masalah semasa menghantar permohonan. Sila pastikan webhook n8n anda telah diaktifkan.");
         } finally {
             setIsSubmitting(false);
         }
@@ -209,16 +208,7 @@ export default function DaftarForm() {
                     </div>
                 </div>
 
-                <div className="h-px bg-white/10" />
 
-                <div className="reveal-on-load stagger-4 bg-gold/5 border border-gold/10 rounded-xl p-6">
-                    <h4 className="font-bold text-gold mb-2">Penting:</h4>
-                    <ul className="list-disc list-inside text-sm text-gray-400 space-y-1 font-sans">
-                        <li>Perkhidmatan ini adalah 100% percuma.</li>
-                        <li>Kami tidak menyediakan akses 'login' (CMS) buat masa ini.</li>
-                        <li>Sebarang kemaskini maklumat perlu dimaklumkan kepada pihak admin MOSQ.</li>
-                    </ul>
-                </div>
 
                 {submitStatus === "error" && (
                     <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 text-sm">
@@ -226,7 +216,7 @@ export default function DaftarForm() {
                     </div>
                 )}
 
-                <div className="pt-4 reveal-on-load stagger-5">
+                <div className="pt-4 reveal-on-load stagger-4">
                     <Button
                         type="submit"
                         size="lg"

@@ -2,6 +2,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Metadata } from "next";
+import Link from "next/link";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: "Soalan Lazim (FAQ) | MOSQ",
@@ -10,38 +12,6 @@ export const metadata: Metadata = {
 };
 
 export default function SoalanLazimPage() {
-    const faqs = [
-        {
-            question: "Adakah perkhidmatan ini benar-benar percuma?",
-            answer:
-                "Ya, 100% percuma. Tiada bayaran pendaftaran, tiada yuran bulanan, dan tiada kos tersembunyi. Ini adalah inisiatif wakaf digital kami.",
-        },
-        {
-            question: "Siapakah yang menguruskan laman web ini?",
-            answer:
-                "Pihak MOSQ akan menyediakan laman web tersebut. Selepas siap, pihak masjid boleh meminta kemaskini maklumat (seperti waktu solat atau aktiviti) dengan menghubungi kami. Kami sedang membangunkan sistem untuk AJK masjid mengemaskini sendiri pada masa akan datang.",
-        },
-        {
-            question: "Berapa lama masa yang diambil untuk siap?",
-            answer:
-                "Biasanya proses mengambil masa 3 hingga 7 hari bekerja selepas kami menerima maklumat lengkap daripada pihak masjid.",
-        },
-        {
-            question: "Adakah saya perlu beli domain atau hosting?",
-            answer:
-                "Tidak perlu. Kami akan hoskan laman web anda di sub-domain mosq.io (contoh: mosq.io/masjid-anda). Hosting juga ditanggung sepenuhnya oleh kami.",
-        },
-        {
-            question: "Bolehkan saya guna domain sendiri (contoh.com)?",
-            answer:
-                "Buat masa ini, semua laman web di bawah platform MOSQ menggunakan alamat mosq.io untuk memastikan ia kekal percuma dan mudah diurus. Namun, anda boleh 'forward' domain anda ke alamat MOSQ jika mahu.",
-        },
-        {
-            question: "Adakah data masjid selamat?",
-            answer:
-                "Ya, kami mengambil berat tentang keselamatan data. Kami menggunakan teknologi terkini dan 'best practices' untuk melindungi maklumat masjid anda.",
-        },
-    ];
 
     return (
         <div className="bg-black min-h-screen">
@@ -57,19 +27,42 @@ export default function SoalanLazimPage() {
                 <section className="py-24">
                     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                         <div className="space-y-6">
-                            {faqs.map((faq, index) => (
-                                <div
-                                    key={index}
-                                    className={`reveal-on-load stagger-${(index % 3) + 1} glass-card rounded-2xl p-8 border border-white/5 hover:border-gold/30 transition-all`}
-                                >
-                                    <h3 className="text-xl font-bold text-white mb-3">
-                                        {faq.question}
-                                    </h3>
-                                    <p className="text-gray-400 leading-relaxed mb-0 font-sans">
-                                        {faq.answer}
-                                    </p>
-                                </div>
-                            ))}
+                            <FAQAccordion
+                                items={[
+                                    {
+                                        question: "Adakah perkhidmatan ini benar-benar percuma?",
+                                        answer: "Ya, 100% percuma. Tiada bayaran pendaftaran, tiada yuran bulanan, dan tiada kos tersembunyi. Ini adalah inisiatif wakaf digital kami.",
+                                    },
+                                    {
+                                        question: "Adakah ia percuma selamanya?",
+                                        answer: "Ya, perkhidmatan ini kekal percuma selagi Lamanify.com mampu menampung kos operasi untuk menyokong inisiatif ini.",
+                                    },
+                                    {
+                                        question: "Bolehkah saya dapat akses untuk edit sendiri?",
+                                        answer: "Buat masa ini, tidak. Ini adalah binaan 'one-time'. Sebarang perubahan di masa hadapan perlu melalui pasukan Lamanify bagi memastikan kualiti rekabentuk terjaga.",
+                                    },
+                                    {
+                                        question: "Mengapa percuma?",
+                                        answer: "Ini adalah sebahagian daripada projek CSR (Tanggungjawab Sosial Korporat) kami. Kami ingin menyumbang kepakaran teknikal kami kembali kepada komuniti Islam.",
+                                    },
+                                    {
+                                        question: "Siapakah Lamanify?",
+                                        answer: "Lamanify adalah agensi reka bentuk web yang pakar dalam sektor kesihatan di Malaysia. Kami telah membina laman web untuk lebih 100+ klinik dan pusat perubatan.",
+                                    },
+                                    {
+                                        question: "Bagaimana cara dapatkan?",
+                                        answer: (
+                                            <>
+                                                Anda boleh mendaftar minat dengan mengisi borang di halaman{" "}
+                                                <Link href="/daftar" className="text-gold hover:underline">
+                                                    /daftar
+                                                </Link>
+                                                . Kami akan menghubungi anda untuk langkah seterusnya.
+                                            </>
+                                        ),
+                                    },
+                                ]}
+                            />
                         </div>
 
                         {/* Who Behind MOSQ */}
@@ -100,6 +93,65 @@ export default function SoalanLazimPage() {
                         </div>
                     </div>
                 </section>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            mainEntity: [
+                                {
+                                    "@type": "Question",
+                                    name: "Adakah perkhidmatan ini benar-benar percuma?",
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: "Ya, 100% percuma. Tiada bayaran pendaftaran, tiada yuran bulanan, dan tiada kos tersembunyi. Ini adalah inisiatif wakaf digital kami.",
+                                    },
+                                },
+                                {
+                                    "@type": "Question",
+                                    name: "Adakah ia percuma selamanya?",
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: "Ya, perkhidmatan ini kekal percuma selagi Lamanify.com mampu menampung kos operasi untuk menyokong inisiatif ini.",
+                                    },
+                                },
+                                {
+                                    "@type": "Question",
+                                    name: "Bolehkah saya dapat akses untuk edit sendiri?",
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: "Buat masa ini, tidak. Ini adalah binaan 'one-time'. Sebarang perubahan di masa hadapan perlu melalui pasukan Lamanify bagi memastikan kualiti rekabentuk terjaga.",
+                                    },
+                                },
+                                {
+                                    "@type": "Question",
+                                    name: "Mengapa percuma?",
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: "Ini adalah sebahagian daripada projek CSR (Tanggungjawab Sosial Korporat) kami. Kami ingin menyumbang kepakaran teknikal kami kembali kepada komuniti Islam.",
+                                    },
+                                },
+                                {
+                                    "@type": "Question",
+                                    name: "Siapakah Lamanify?",
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: "Lamanify adalah agensi reka bentuk web yang pakar dalam sektor kesihatan di Malaysia. Kami telah membina laman web untuk lebih 100+ klinik dan pusat perubatan.",
+                                    },
+                                },
+                                {
+                                    "@type": "Question",
+                                    name: "Bagaimana cara dapatkan?",
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: "Anda boleh mendaftar minat dengan mengisi borang di halaman /daftar. Kami akan menghubungi anda untuk langkah seterusnya.",
+                                    },
+                                },
+                            ],
+                        }),
+                    }}
+                />
             </main>
             <Footer />
         </div>

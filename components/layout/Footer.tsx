@@ -2,14 +2,15 @@ import Link from "next/link";
 
 const footerLinks = {
     platform: [
-        { href: "/cara-kerja", label: "Cara Kerja" },
+        { href: "/cara-kerja", label: "Cara Dapatkan" },
         { href: "/kenapa-perlu", label: "Manfaat" },
+        { href: "/siapa-kami", label: "Siapa Kami" },
         { href: "/contoh", label: "Demo" },
     ],
     support: [
         { href: "/soalan-lazim", label: "Soalan Lazim" },
         { href: "/daftar", label: "Daftar Masjid" },
-        { href: "mailto:support@mosq.io", label: "Hubungi Kami" },
+        { href: "/daftar", label: "Hubungi Kami" },
     ]
 };
 
@@ -22,9 +23,12 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="md:col-span-2 space-y-6">
-                        <Link href="/" className="font-bold text-2xl tracking-tight">
-                            <span className="text-white">MOSQ</span>
-                            <span className="text-gold">.</span>
+                        <Link href="/" className="inline-block transition-opacity hover:opacity-80">
+                            <img
+                                src="https://res.cloudinary.com/lamanify/image/upload/v1766550438/Mosq_fqtghd.webp"
+                                alt="MOSQ Logo"
+                                className="h-[72px] w-auto object-contain"
+                            />
                         </Link>
                         <p className="text-gray-500 text-sm max-w-sm leading-relaxed">
                             Platform laman web masjid percuma yang direka untuk memudahkan pengurusan maklumat masjid secara digital, profesional, dan selamat.
@@ -56,7 +60,7 @@ export default function Footer() {
                         <h3 className="font-bold text-white mb-6 font-heading">Bantuan</h3>
                         <ul className="space-y-4">
                             {footerLinks.support.map((link) => (
-                                <li key={link.href}>
+                                <li key={link.label}>
                                     <Link
                                         href={link.href}
                                         className="text-sm text-gray-500 hover:text-gold transition-colors"

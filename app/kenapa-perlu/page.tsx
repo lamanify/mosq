@@ -151,7 +151,7 @@ export default function KenapaPerluPage() {
                                 href="/daftar"
                                 className="inline-flex items-center justify-center rounded-xl bg-gradient-gold text-black px-10 py-5 text-lg font-bold transition-all shadow-[0_0_30px_rgba(201,162,77,0.4)] hover:scale-105"
                             >
-                                Daftar Masjid Anda Sekarang
+                                Dapat Website Masjid Percuma
                             </Link>
                         </div>
                     </div>

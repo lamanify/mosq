@@ -5,6 +5,7 @@ interface PageBannerProps {
     title: string;
     description: string;
     align?: "center" | "left";
+    className?: string;
 }
 
 export const PageBanner = ({
@@ -12,9 +13,10 @@ export const PageBanner = ({
     title,
     description,
     align = "center",
+    className = "",
 }: PageBannerProps) => {
     return (
-        <section className="relative pt-40 pb-20 px-4 overflow-hidden">
+        <section className={`relative pt-40 pb-20 px-4 overflow-hidden ${className}`}>
             {/* Glow Effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gold/5 rounded-[100%] blur-[100px] pointer-events-none z-0" />
 

@@ -94,16 +94,15 @@ export default function HomePage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden min-h-screen flex flex-col justify-center pt-32 pb-20 lg:pt-48 lg:pb-32">
+        <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-0 lg:pt-48 lg:pb-0">
           {/* Background Image - Covers Viewport */}
-          <div
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage: 'url(https://res.cloudinary.com/lamanify/image/upload/v1766550864/Mosq_4_g7urbn.webp)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
+          <Image
+            src="https://res.cloudinary.com/lamanify/image/upload/v1766550864/Mosq_4_g7urbn.webp"
+            alt="Mosque Architecture Background"
+            fill
+            priority
+            className="object-cover z-0"
+            quality={85}
           />
           {/* Dark Overlay for Text Readability */}
           <div className="absolute inset-0 bg-black/60 z-[1]" />
@@ -130,7 +129,7 @@ export default function HomePage() {
                   href="/daftar"
                   className="bg-gradient-gold text-black hover:opacity-90 border-none font-bold px-8 py-4 text-lg rounded-xl shadow-[0_0_30px_rgba(201,162,77,0.4)] transition-all hover:scale-105"
                 >
-                  Daftar Masjid Percuma
+                  Dapat Website Masjid Percuma
                 </LinkButton>
                 <LinkButton
                   href="/contoh"
@@ -147,26 +146,18 @@ export default function HomePage() {
             </div>
 
             {/* Platform Preview / Mockup */}
-            <div className="mt-20 relative mx-auto max-w-5xl">
+            <div className="mt-20 relative mx-auto max-w-5xl z-20 -mb-[30px]">
               <div className="absolute inset-0 bg-gold/20 blur-[60px] rounded-full opacity-30" />
               <div className="relative bg-[#111] border border-white/10 rounded-2xl p-2 shadow-2xl">
                 <div className="bg-[#151515] rounded-xl overflow-hidden border border-white/5 aspect-[16/9] relative">
                   {/* Decorative Mockup Content */}
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-700">
-                    <span className="text-sm">Paparan Website Masjid</span>
-                  </div>
-                  {/* We can replace this with an actual image in future */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black p-8 flex flex-col items-center justify-center">
-                    <div className="w-3/4 h-4/5 bg-white/5 rounded-lg border border-white/10 shadow-xl backdrop-blur-sm p-6">
-                      <div className="h-4 w-1/3 bg-white/10 rounded mb-4" />
-                      <div className="h-24 w-full bg-gradient-to-r from-gold/20 to-transparent rounded-lg mb-4" />
-                      <div className="grid grid-cols-3 gap-4">
-                        <div className="h-20 bg-white/5 rounded" />
-                        <div className="h-20 bg-white/5 rounded" />
-                        <div className="h-20 bg-white/5 rounded" />
-                      </div>
-                    </div>
-                  </div>
+                  <Image
+                    src="https://res.cloudinary.com/lamanify/image/upload/v1766570169/Gemini_Generated_Image_3nvw5l3nvw5l3nvw_ly8efk.webp"
+                    alt="MOSQ Platform Dashboard Preview"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -174,21 +165,21 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="bg-[#050505] py-24 relative">
+        <section className="bg-[#050505] pt-24 pb-24 relative z-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Mengapa Pilih MOSQ?
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-center mx-auto max-w-2xl">
                 Platform yang dibina khas dengan teknologi terkini untuk institusi masjid.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, idx) => (
-                <div key={feature.title} className={`reveal-on-load stagger-${idx + 1} glass-card p-8 rounded-2xl`}>
-                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20">
+                <div key={feature.title} className={`reveal-on-load stagger-${idx + 1} glass-card p-8 rounded-2xl text-center`}>
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20 mx-auto">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 font-heading">
@@ -269,7 +260,7 @@ export default function HomePage() {
             </p>
             <div className="flex justify-center">
               <LinkButton href="/daftar" className="bg-gradient-gold text-black hover:opacity-90 px-10 py-5 text-lg font-bold rounded-xl shadow-[0_0_30px_rgba(201,162,77,0.4)]">
-                Mulakan Sekarang - Percuma
+                Dapat Website Masjid Percuma
               </LinkButton>
             </div>
           </div>

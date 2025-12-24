@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { LinkButton } from "@/components/ui/Button";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Contoh Website Masjid | MOSQ",
@@ -28,17 +29,18 @@ export default function ContohPage() {
                             <div className="relative group reveal-on-load stagger-1">
                                 <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-orange-500/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
                                 <div className="relative bg-[#111] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                                    {/* Placeholder for screenshot */}
+                                    {/* Snapshot of the demo */}
                                     <div className="aspect-[16/10] bg-gray-800 relative flex items-center justify-center group overflow-hidden">
-                                        {/* Replace with actual image later */}
-                                        <div className="text-center p-8">
-                                            <span className="text-gray-500 block mb-2 font-mono text-sm tracking-widest uppercase">Paparan Demo</span>
-                                            <h3 className="text-2xl font-bold text-white">Masjid Al-Hidayah</h3>
-                                        </div>
+                                        <Image
+                                            src="https://res.cloudinary.com/lamanify/image/upload/v1766568604/Screenshot_5_uxpmgd.webp"
+                                            alt="Paparan Demo Masjid Al-Hidayah"
+                                            fill
+                                            className="object-contain group-hover:scale-105 transition-transform duration-500"
+                                        />
 
                                         <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
                                             <LinkButton
-                                                href="/masjid-al-hidayah-shah-alam"
+                                                href="/contoh/masjid-al-hidayah-shah-alam"
                                                 className="bg-gradient-gold text-black hover:opacity-90 font-bold border-none"
                                             >
                                                 Lawati Demo
@@ -81,8 +83,8 @@ export default function ContohPage() {
 
                                 <div className="mt-10 reveal-on-load stagger-5">
                                     <LinkButton
-                                        href="/masjid-al-hidayah-shah-alam"
-                                        className="bg-white/10 text-white hover:bg-white/20 border-white/5 transition-all"
+                                        href="/contoh/masjid-al-hidayah-shah-alam"
+                                        className="bg-gradient-gold text-black font-bold hover:opacity-90 border-none transition-all"
                                     >
                                         Lihat Demo Penuh &rarr;
                                     </LinkButton>
