@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: "Daftar Masjid | MOSQ",
     description:
         "Daftarkan masjid anda sekarang untuk mendapatkan laman web rasmi secara percuma. Inisiatif digital untuk pengimarahan masjid.",
+    alternates: {
+        canonical: "/daftar",
+    },
 };
 
 export default function DaftarPage() {

@@ -1,6 +1,15 @@
+import { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { LinkButton } from "@/components/ui/Button";
+
+export const metadata: Metadata = {
+    title: "Siapa Kami | MOSQ",
+    description: "Kenali pasukan di sebalik MOSQ dan misi kami untuk mendigitalkan masjid di Malaysia secara percuma.",
+    alternates: {
+        canonical: "/siapa-kami",
+    },
+};
 
 export default function SiapaKamiPage() {
     return (

@@ -43,9 +43,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "https://res.cloudinary.com/lamanify/image/upload/v1766570820/Mosq_5_cuhs4t.webp",
   },
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "MOSQ | Platform Website Masjid No.1 Malaysia",
     description: "Bina website masjid profesional dalam 5 minit. Percuma seumur hidup. Inisiatif digital untuk ummah.",
