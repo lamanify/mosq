@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, Truck } from "lucide-react";
+import PrayerTimeDisplay from "@/components/PrayerTimeDisplay";
 
 async function getPrayerTimes() {
     try {
@@ -38,10 +39,8 @@ export default async function MasjidAlHidayahPage() {
         { name: 'Isyak', time: '20:35' },
     ];
 
-    // Determine active prayer (the next one)
-    const currentTimeStr = serverDate.toTimeString().slice(0, 5);
-    let activeIndex = prayerMapping.findIndex(p => currentTimeStr < p.time);
-    if (activeIndex === -1) activeIndex = 0; // Wrap around to Subuh if after Isyak
+    const gregorianDate = today ? `${today.day}, ${today.date}` : 'Hari Ini';
+    const hijriDate = today ? `Hijri: ${today.hijri}` : '';
 
     return (
         <div className="bg-white">
@@ -84,30 +83,11 @@ export default async function MasjidAlHidayahPage() {
 
             {/* PRAYER TIMES - Floating Card Style */}
             <section className="relative -mt-24 z-20 px-4">
-                <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100 p-8 md:p-12 backdrop-blur-xl">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-gray-100 pb-8">
-                        <div>
-                            <span className="text-green-600 text-sm font-bold tracking-widest uppercase mb-2 block">Waktu Solat Semasa</span>
-                            <h2 className="text-3xl font-bold text-slate-900">Shah Alam, Selangor</h2>
-                        </div>
-                        <div className="mt-4 md:mt-0 text-right">
-                            <p className="text-sm text-gray-400">{today ? `${today.day}, ${today.date}` : 'Hari Ini'}</p>
-                            <p className="text-lg font-mono font-medium text-slate-600">{today ? `Hijri: ${today.hijri}` : ''}</p>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                        {prayerMapping.map((item, idx) => {
-                            const isActive = idx === activeIndex;
-                            return (
-                                <div key={idx} className={`text-center p-6 rounded-2xl transition-all ${isActive ? 'bg-green-600 text-white shadow-lg shadow-green-600/30 scale-105 ring-4 ring-green-600/20' : 'bg-gray-50 text-slate-600 hover:bg-gray-100'}`}>
-                                    <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${isActive ? 'text-green-100' : 'text-gray-400'}`}>{item.name}</p>
-                                    <p className={`text-2xl font-mono font-bold leading-none ${isActive ? 'text-white' : 'text-slate-900'}`}>{item.time}</p>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
+                <PrayerTimeDisplay
+                    prayerMapping={prayerMapping}
+                    hijriDate={hijriDate}
+                    gregorianDate={gregorianDate}
+                />
             </section>
 
             {/* FEATURED SERVICES - BENTO GRID STYLE */}
