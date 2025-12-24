@@ -82,7 +82,7 @@ export default function Header() {
                         alt="MOSQ Logo"
                         width={120}
                         height={40}
-                        className="h-[72px] w-auto object-contain"
+                        className="h-[90px] w-auto object-contain"
                         priority
                     />
                 </Link>
@@ -108,7 +108,7 @@ export default function Header() {
                 <div className="flex items-center gap-4">
                     <Link
                         href="/daftar"
-                        className="inline-flex items-center justify-center rounded-lg bg-gold hover:bg-gold/90 text-black border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-lg shadow-gold/20"
+                        className="hidden md:inline-flex items-center justify-center rounded-lg bg-gold hover:bg-gold/90 text-black border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-lg shadow-gold/20"
                     >
                         Dapat Website Masjid Percuma
                     </Link>
@@ -196,7 +196,7 @@ export default function Header() {
                     {/* Mobile CTA */}
                     <Link
                         href="/daftar"
-                        className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gradient-to-r from-gold/20 to-gold/10 text-gold border border-gold/20 hover:bg-gold/30 transition-all duration-200"
+                        className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gold hover:bg-gold/90 text-black border border-transparent transition-all shadow-lg shadow-gold/20"
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Dapat Website Masjid Percuma

@@ -1,0 +1,20 @@
+
+> fiery-sagan@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+✓ Ready in 1126ms
+○ Compiling / ...
+Image with src "https://res.cloudinary.com/lamanify/image/upload/v1766550864/Mosq_4_g7urbn.webp" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET / 200 in 5.9s (compile: 4.8s, render: 1119ms)
+ GET / 200 in 330ms (compile: 8ms, render: 322ms)
