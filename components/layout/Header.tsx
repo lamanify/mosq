@@ -82,13 +82,13 @@ export default function Header() {
                         alt="MOSQ Logo"
                         width={120}
                         height={40}
-                        className="h-[72px] w-auto object-contain"
+                        className="h-[90px] w-auto object-contain"
                         priority
                     />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex md:items-center md:gap-8">
+                <div className="hidden lg:flex lg:items-center lg:gap-8">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
                         return (
@@ -108,7 +108,7 @@ export default function Header() {
                 <div className="flex items-center gap-4">
                     <Link
                         href="/daftar"
-                        className="inline-flex items-center justify-center rounded-lg bg-gold hover:bg-gold/90 text-black border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-lg shadow-gold/20"
+                        className="hidden lg:inline-flex items-center justify-center rounded-lg bg-gold hover:bg-gold/90 text-black border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-lg shadow-gold/20"
                     >
                         Dapat Website Masjid Percuma
                     </Link>
@@ -116,7 +116,7 @@ export default function Header() {
                     {/* Mobile menu toggle button */}
                     <button
                         type="button"
-                        className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+                        className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-expanded={mobileMenuOpen}
                         aria-controls="mobile-menu"
@@ -151,7 +151,7 @@ export default function Header() {
             <div
                 id="mobile-menu"
                 className={`
-                    md:hidden
+                    lg:hidden
                     fixed left-0 right-0
                     top-[88px]
                     mx-4
@@ -196,7 +196,7 @@ export default function Header() {
                     {/* Mobile CTA */}
                     <Link
                         href="/daftar"
-                        className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gradient-to-r from-gold/20 to-gold/10 text-gold border border-gold/20 hover:bg-gold/30 transition-all duration-200"
+                        className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gold hover:bg-gold/90 text-black border border-transparent transition-all shadow-lg shadow-gold/20"
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Dapat Website Masjid Percuma
@@ -207,7 +207,7 @@ export default function Header() {
             {/* Backdrop overlay */}
             <div
                 className={`
-                    md:hidden
+                    lg:hidden
                     fixed inset-0 -z-10
                     bg-black/60 backdrop-blur-sm
                     transition-opacity duration-300
