@@ -68,3 +68,30 @@ export function generateMosqueSlug(namaMasjid: string, bandar: string): string {
         .replace(/-+/g, "-") // Replace multiple hyphens with single
         .trim();
 }
+
+/**
+ * Get published mosques from Supabase (SEO Registry)
+ */
+export async function getPublishedMosques() {
+    try {
+        // We import dynamically or standard. Since this is server-side, standard is fine.
+        // But we must import the client we just created.
+        const { supabaseAdmin } = await import('./supabase');
+
+        const { data, error } = await supabaseAdmin
+            .from('public_mosques')
+            .select('slug, name')
+            .eq('status', 'published')
+            .order('published_at', { ascending: false });
+
+        if (error) {
+            console.error('Error fetching published mosques:', error);
+            return [];
+        }
+
+        return data || [];
+    } catch (err) {
+        console.error('Unexpected error fetching published mosques:', err);
+        return [];
+    }
+}

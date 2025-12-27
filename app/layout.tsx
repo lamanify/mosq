@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "https://res.cloudinary.com/lamanify/image/upload/v1766570820/Mosq_5_cuhs4t.webp",
+    icon: "https://res.cloudinary.com/debi0yfq9/image/upload/v1766797441/Mosq_Logo_2_tv21jw.jpg",
   },
   alternates: {
     canonical: "/",
@@ -99,7 +99,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
       </head>
       <body
-        className={`${inter.variable} ${sora.variable} antialiased bg-black text-white selection:bg-gold selection:text-black`}
+        className={`${inter.variable} ${sora.variable} antialiased bg-white text-grey-900 selection:bg-gold selection:text-white`}
         suppressHydrationWarning
       >
         {children}

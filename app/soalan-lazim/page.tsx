@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function SoalanLazimPage() {
 
     return (
-        <div className="bg-black min-h-screen">
+        <div className="bg-white min-h-screen">
             <Header />
             <main>
                 <PageBanner
@@ -54,8 +54,8 @@ export default function SoalanLazimPage() {
                                         answer: (
                                             <>
                                                 Anda boleh mendaftar minat dengan mengisi borang di halaman{" "}
-                                                <Link href="/daftar" className="text-gold hover:underline">
-                                                    /daftar
+                                                <Link href="https://apps.mosq.io" className="text-gold hover:underline">
+                                                    https://apps.mosq.io
                                                 </Link>
                                                 . Kami akan menghubungi anda untuk langkah seterusnya.
                                             </>
@@ -66,11 +66,11 @@ export default function SoalanLazimPage() {
                         </div>
 
                         {/* Who Behind MOSQ */}
-                        <div className="reveal-on-load stagger-3 mt-32 max-w-2xl mx-auto border-t border-white/5 pt-16">
-                            <h2 className="text-2xl font-bold text-white mb-8 text-center">
+                        <div className="reveal-on-load stagger-3 mt-32 max-w-2xl mx-auto border-t border-zinc-200 pt-16">
+                            <h2 className="text-2xl font-bold text-grey-900 mb-8 text-center">
                                 Siapa Di Sebalik MOSQ?
                             </h2>
-                            <div className="space-y-6 text-gray-400 font-sans leading-relaxed text-center italic opacity-80">
+                            <div className="space-y-6 text-grey-600 font-sans leading-relaxed text-center italic opacity-80">
                                 <p>
                                     MOSQ dibangunkan oleh pasukan profesional web yang juga mengendalikan Lamanify, sebuah agensi reka bentuk web dalam sektor kesihatan.
                                 </p>
@@ -81,7 +81,7 @@ export default function SoalanLazimPage() {
                         </div>
 
                         <div className="reveal-on-load stagger-1 mt-24 text-center">
-                            <p className="text-gray-400 mb-6 font-sans">
+                            <p className="text-grey-600 mb-6 font-sans">
                                 Ada soalan lain? Hubungi pasukan sokongan kami.
                             </p>
                             <a
@@ -145,7 +145,7 @@ export default function SoalanLazimPage() {
                                     name: "Bagaimana cara dapatkan?",
                                     acceptedAnswer: {
                                         "@type": "Answer",
-                                        text: "Anda boleh mendaftar minat dengan mengisi borang di halaman /daftar. Kami akan menghubungi anda untuk langkah seterusnya.",
+                                        text: "Anda boleh mendaftar minat dengan mengisi borang di halaman https://apps.mosq.io. Kami akan menghubungi anda untuk langkah seterusnya.",
                                     },
                                 },
                             ],

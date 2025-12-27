@@ -86,7 +86,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-white min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -97,28 +97,28 @@ export default function HomePage() {
         <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-0 lg:pt-48 lg:pb-0">
           {/* Background Image - Covers Viewport */}
           <Image
-            src="https://res.cloudinary.com/lamanify/image/upload/v1766550864/Mosq_4_g7urbn.webp"
+            src="https://res.cloudinary.com/debi0yfq9/image/upload/v1766830939/Mosq_9_nrcyeu.webp"
             alt="Mosque Architecture Background"
             fill
             priority
             className="object-cover z-0"
             quality={85}
           />
-          {/* Dark Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-black/60 z-[1]" />
+          {/* Light Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-white/70 z-[1]" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center pt-20">
-            <div className="reveal-on-load stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-medium mb-8 backdrop-blur-sm">
+            <div className="reveal-on-load stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-grey-100 border border-grey-200 text-grey-600 text-sm font-medium mb-8">
               <span className="flex h-2 w-2 rounded-full bg-gold animate-pulse" />
               Inisiatif Digital Untuk Ummah
             </div>
 
-            <h1 className="reveal-on-load stagger-2 text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8">
+            <h1 className="reveal-on-load stagger-2 text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-grey-900 mb-8">
               Laman Web Masjid <br />
               <span className="text-gradient-gold">Profesional, Percuma & Mudah</span>
             </h1>
 
-            <p className="reveal-on-load stagger-3 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed font-sans">
+            <p className="reveal-on-load stagger-3 max-w-2xl mx-auto text-lg sm:text-xl text-grey-600 mb-10 leading-relaxed font-sans">
               Bina kewujudan digital masjid anda dengan mudah. <br className="hidden sm:block" />
               Tanpa kos, tanpa kemahiran teknikal, tanpa pengurusan rumit.
             </p>
@@ -126,30 +126,30 @@ export default function HomePage() {
             <div className="reveal-on-load stagger-4 flex flex-col items-center gap-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <LinkButton
-                  href="/daftar"
-                  className="bg-gradient-gold text-black hover:opacity-90 border-none font-bold px-8 py-4 text-lg rounded-xl shadow-[0_0_30px_rgba(201,162,77,0.4)] transition-all hover:scale-105"
+                  href="https://apps.mosq.io"
+                  className="bg-gradient-gold text-white hover:opacity-90 border-none font-bold px-8 py-4 text-lg rounded-xl shadow-lg transition-all hover:scale-105"
                 >
                   Dapat Website Masjid Percuma
                 </LinkButton>
                 <LinkButton
                   href="/contoh"
                   variant="secondary"
-                  className="bg-white/5 text-white border-white/10 hover:bg-white/10 hover:border-white/20 px-8 py-4 text-lg rounded-xl backdrop-blur-sm"
+                  className="bg-white text-grey-800 border-grey-200 hover:bg-grey-50 hover:border-grey-300 px-8 py-4 text-lg rounded-xl shadow-sm"
                 >
                   Lihat Contoh Laman Web
                 </LinkButton>
               </div>
 
-              <p className="text-sm text-gray-500 font-sans">
+              <p className="text-sm text-grey-500 font-sans">
                 Digunakan untuk maklumat masjid, jadual solat & aktiviti komuniti.
               </p>
             </div>
 
             {/* Platform Preview / Mockup */}
             <div className="mt-20 relative mx-auto max-w-5xl z-20 -mb-[30px]">
-              <div className="absolute inset-0 bg-gold/20 blur-[60px] rounded-full opacity-30" />
-              <div className="relative bg-[#111] border border-white/10 rounded-2xl p-2 shadow-2xl">
-                <div className="bg-[#151515] rounded-xl overflow-hidden border border-white/5 aspect-[16/9] relative">
+              <div className="absolute inset-0 bg-gold/10 blur-[60px] rounded-full opacity-30" />
+              <div className="relative bg-white border border-grey-200 rounded-2xl p-2 shadow-xl">
+                <div className="bg-grey-50 rounded-xl overflow-hidden border border-grey-100 aspect-[16/9] relative">
                   {/* Decorative Mockup Content */}
                   <Image
                     src="https://res.cloudinary.com/lamanify/image/upload/v1766570169/Gemini_Generated_Image_3nvw5l3nvw5l3nvw_ly8efk.webp"
@@ -165,13 +165,13 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="bg-[#050505] pt-24 pb-24 relative z-10">
+        <section className="bg-grey-50 pt-24 pb-24 relative z-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mb-4">
                 Mengapa Pilih MOSQ?
               </h2>
-              <p className="text-gray-400 text-center mx-auto max-w-2xl">
+              <p className="text-grey-600 text-center mx-auto max-w-2xl">
                 Platform yang dibina khas dengan teknologi terkini untuk institusi masjid.
               </p>
             </div>
@@ -182,10 +182,10 @@ export default function HomePage() {
                   <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20 mx-auto">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-heading">
+                  <h3 className="text-xl font-bold text-grey-900 mb-3 font-heading">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-0">
+                  <p className="text-grey-600 text-sm leading-relaxed mb-0">
                     {feature.description}
                   </p>
                 </div>
@@ -194,51 +194,51 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* How It Works Steps - Dark Mode */}
-        <section className="py-24 border-t border-white/5 bg-[#080808]">
+        {/* How It Works Steps - Light Mode */}
+        <section className="py-24 border-t border-grey-200 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mb-6">
                   Mudah. Pantas. <br />
                   <span className="text-gradient-gold">Tanpa Koding.</span>
                 </h2>
-                <p className="text-gray-400 mb-8 text-lg">
+                <p className="text-grey-600 mb-8 text-lg">
                   Kami permudah proses digitalisasi masjid anda melalui 3 langkah ringkas.
                 </p>
 
                 <div className="space-y-8">
                   <div className="reveal-on-load stagger-1 flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold font-bold">1</div>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-grey-100 border border-grey-200 flex items-center justify-center text-gold font-bold">1</div>
                     <div>
-                      <h4 className="text-white font-bold text-lg">Daftar Maklumat</h4>
-                      <p className="text-gray-500 text-sm mt-1 mb-0">Isi borang ringkas tentang butiran masjid anda.</p>
+                      <h4 className="text-grey-900 font-bold text-lg">Daftar Maklumat</h4>
+                      <p className="text-grey-500 text-sm mt-1 mb-0">Isi borang ringkas tentang butiran masjid anda.</p>
                     </div>
                   </div>
                   <div className="reveal-on-load stagger-2 flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold font-bold">2</div>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-grey-100 border border-grey-200 flex items-center justify-center text-gold font-bold">2</div>
                     <div>
-                      <h4 className="text-white font-bold text-lg">Sistem Menjana Website</h4>
-                      <p className="text-gray-500 text-sm mt-1 mb-0">Platform kami akan membina struktur website secara automatik.</p>
+                      <h4 className="text-grey-900 font-bold text-lg">Sistem Menjana Website</h4>
+                      <p className="text-grey-500 text-sm mt-1 mb-0">Platform kami akan membina struktur website secara automatik.</p>
                     </div>
                   </div>
                   <div className="reveal-on-load stagger-3 flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gold text-black flex items-center justify-center font-bold">3</div>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-gold text-white flex items-center justify-center font-bold">3</div>
                     <div>
-                      <h4 className="text-white font-bold text-lg">Siap Untuk Digunakan</h4>
-                      <p className="text-gray-500 text-sm mt-1 mb-0">Kongsikan pautan website kepada jemaah kariah anda.</p>
+                      <h4 className="text-grey-900 font-bold text-lg">Siap Untuk Digunakan</h4>
+                      <p className="text-grey-500 text-sm mt-1 mb-0">Kongsikan pautan website kepada jemaah kariah anda.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-orange-500/20 blur-2xl opacity-20" />
-                <div className="relative bg-[#111] border border-white/10 rounded-2xl p-8 aspect-square flex items-center justify-center">
+                <div className="absolute -inset-4 bg-gradient-to-r from-gold/10 to-amber-500/10 blur-2xl opacity-30" />
+                <div className="relative bg-white border border-grey-200 rounded-2xl p-8 aspect-square flex items-center justify-center shadow-lg">
                   <div className="text-center">
-                    <div className="text-6xl font-bold text-white mb-2">3~7</div>
+                    <div className="text-6xl font-bold text-grey-900 mb-2">3~7</div>
                     <div className="text-gold uppercase tracking-widest text-sm">Hari Bekerja</div>
-                    <p className="text-gray-500 text-xs mt-4 max-w-[200px] mx-auto">Tempoh siap sepenuhnya selepas pengesahan data</p>
+                    <p className="text-grey-500 text-xs mt-4 max-w-[200px] mx-auto">Tempoh siap sepenuhnya selepas pengesahan data</p>
                   </div>
                 </div>
               </div>
@@ -247,19 +247,18 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gold/10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
+        <section className="py-24 relative overflow-hidden bg-grey-50">
+          <div className="absolute inset-0 bg-gold/5" />
 
           <div className="relative mx-auto max-w-4xl px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-grey-900 mb-6">
               Sedia untuk bertukar ke digital?
             </h2>
-            <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-grey-600 text-lg mb-10 max-w-2xl mx-auto">
               Sertai beratus masjid lain yang telah memanfaatkan platform MOSQ untuk kemudahan jemaah.
             </p>
             <div className="flex justify-center">
-              <LinkButton href="/daftar" className="bg-gradient-gold text-black hover:opacity-90 px-10 py-5 text-lg font-bold rounded-xl shadow-[0_0_30px_rgba(201,162,77,0.4)]">
+              <LinkButton href="https://apps.mosq.io" className="bg-gradient-gold text-white hover:opacity-90 px-10 py-5 text-lg font-bold rounded-xl shadow-lg">
                 Dapat Website Masjid Percuma
               </LinkButton>
             </div>
@@ -267,6 +266,6 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
-    </div>
+    </div >
   );
 }

@@ -11,7 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
         theme_color: '#000000',
         icons: [
             {
-                src: 'https://res.cloudinary.com/lamanify/image/upload/v1766570820/Mosq_5_cuhs4t.webp',
+                src: 'https://res.cloudinary.com/debi0yfq9/image/upload/v1766797441/Mosq_Logo_2_tv21jw.jpg',
                 sizes: 'any',
                 type: 'image/webp',
             },

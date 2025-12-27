@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function NotFound() {
     return (
-        <div className="bg-black min-h-screen flex flex-col">
+        <div className="bg-white min-h-screen flex flex-col">
             <Header />
 
             <main className="flex-grow flex items-center">
@@ -14,16 +14,16 @@ export default function NotFound() {
 
                         {/* Left Side: Content */}
                         <div className="text-left order-2 lg:order-1">
-                            <div className="reveal-on-load stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gold text-sm font-medium mb-8 backdrop-blur-sm">
+                            <div className="reveal-on-load stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-gold text-sm font-medium mb-8 backdrop-blur-sm">
                                 <span className="flex h-2 w-2 rounded-full bg-gold animate-pulse" />
                                 Error 404
                             </div>
 
-                            <h1 className="reveal-on-load stagger-2 text-5xl sm:text-6xl font-bold tracking-tight text-white mb-8">
+                            <h1 className="reveal-on-load stagger-2 text-5xl sm:text-6xl font-bold tracking-tight text-grey-900 mb-8">
                                 Halaman Tidak <span className="text-gradient-gold">Dijumpai</span>
                             </h1>
 
-                            <p className="reveal-on-load stagger-3 max-w-lg text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed font-sans">
+                            <p className="reveal-on-load stagger-3 max-w-lg text-lg sm:text-xl text-grey-600 mb-10 leading-relaxed font-sans">
                                 Maaf, kami tidak dapat menemui halaman yang anda cari. Ia mungkin telah dipindahkan atau tidak lagi wujud.
                             </p>
 
@@ -37,7 +37,7 @@ export default function NotFound() {
                                 <LinkButton
                                     href="/contoh"
                                     variant="secondary"
-                                    className="w-full sm:w-auto bg-white/5 text-white border-white/10 hover:bg-white/10 hover:border-white/20 px-8 py-4 text-lg rounded-xl backdrop-blur-sm"
+                                    className="w-full sm:w-auto bg-zinc-100 text-grey-900 border-zinc-200 hover:bg-zinc-200 hover:border-zinc-300 px-8 py-4 text-lg rounded-xl backdrop-blur-sm"
                                 >
                                     Lihat Contoh Laman Web
                                 </LinkButton>
@@ -50,7 +50,7 @@ export default function NotFound() {
                                 {/* Decorative glow background */}
                                 <div className="absolute -inset-4 bg-gold/20 blur-[60px] rounded-full opacity-30 animate-pulse" />
 
-                                <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                                <div className="relative h-full w-full rounded-2xl overflow-hidden border border-zinc-200 shadow-2xl">
                                     <Image
                                         src="https://res.cloudinary.com/lamanify/image/upload/v1766566572/Gemini_Generated_Image_5k5nk5k5nk5k5nk5_cw7k9a.webp"
                                         alt="Not Found Illustration"
@@ -59,7 +59,7 @@ export default function NotFound() {
                                         priority
                                     />
                                     {/* Subtle overlay for depth */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" />
                                 </div>
                             </div>
                         </div>

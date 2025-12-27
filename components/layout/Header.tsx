@@ -67,7 +67,7 @@ export default function Header() {
           w-full max-w-5xl
           rounded-2xl
           px-6 py-3
-          ${scrolled || mobileMenuOpen ? "bg-black/80 shadow-lg shadow-gold/5 backdrop-blur-xl border border-white/10" : "bg-transparent border border-transparent"}
+          ${scrolled || mobileMenuOpen ? "bg-white/90 shadow-lg shadow-grey-200/50 backdrop-blur-xl border border-grey-200" : "bg-transparent border border-transparent"}
         `}
                 aria-label="Navigasi utama"
             >
@@ -78,12 +78,13 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                 >
                     <Image
-                        src="https://res.cloudinary.com/lamanify/image/upload/v1766550438/Mosq_fqtghd.webp"
+                        src="https://res.cloudinary.com/debi0yfq9/image/upload/v1766830765/Mosq_7_vn5zgh.webp"
                         alt="MOSQ Logo"
-                        width={120}
-                        height={40}
-                        className="h-[72px] w-auto object-contain"
+                        width={600}
+                        height={200}
+                        className="h-[50px] w-auto object-contain"
                         priority
+                        quality={100}
                     />
                 </Link>
 
@@ -95,7 +96,7 @@ export default function Header() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`text-sm font-medium transition-colors hover:text-gold ${isActive ? "text-white" : "text-gray-400"
+                                className={`text-sm font-medium transition-colors hover:text-gold ${isActive ? "text-grey-900" : "text-grey-500"
                                     }`}
                             >
                                 {link.label}
@@ -107,8 +108,8 @@ export default function Header() {
                 {/* CTA Button & Mobile Toggle */}
                 <div className="flex items-center gap-4">
                     <Link
-                        href="/daftar"
-                        className="inline-flex items-center justify-center rounded-lg bg-gold hover:bg-gold/90 text-black border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-lg shadow-gold/20"
+                        href="https://apps.mosq.io"
+                        className="inline-flex items-center justify-center rounded-lg bg-gradient-gold hover:opacity-90 text-white border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-md"
                     >
                         Dapat Website Masjid Percuma
                     </Link>
@@ -116,7 +117,7 @@ export default function Header() {
                     {/* Mobile menu toggle button */}
                     <button
                         type="button"
-                        className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+                        className="md:hidden p-2 text-grey-600 hover:text-grey-900 transition-colors"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-expanded={mobileMenuOpen}
                         aria-controls="mobile-menu"
@@ -156,9 +157,9 @@ export default function Header() {
                     top-[88px]
                     mx-4
                     rounded-2xl
-                    bg-black/95 backdrop-blur-xl
-                    border border-white/10
-                    shadow-2xl shadow-black/50
+                    bg-white/95 backdrop-blur-xl
+                    border border-grey-200
+                    shadow-2xl shadow-grey-200/50
                     transition-all duration-300 ease-in-out
                     transform-gpu
                     ${mobileMenuOpen
@@ -179,8 +180,8 @@ export default function Header() {
                                     block py-3 px-4 rounded-xl text-base font-medium 
                                     transition-all duration-200
                                     ${isActive
-                                        ? "bg-white/10 text-white"
-                                        : "text-gray-400 hover:bg-white/5 hover:text-white"
+                                        ? "bg-grey-100 text-grey-900"
+                                        : "text-grey-600 hover:bg-grey-50 hover:text-grey-900"
                                     }
                                 `}
                                 onClick={() => setMobileMenuOpen(false)}
@@ -191,12 +192,12 @@ export default function Header() {
                     })}
 
                     {/* Divider */}
-                    <div className="h-px bg-white/10 my-2" />
+                    <div className="h-px bg-grey-200 my-2" />
 
                     {/* Mobile CTA */}
                     <Link
-                        href="/daftar"
-                        className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gradient-to-r from-gold/20 to-gold/10 text-gold border border-gold/20 hover:bg-gold/30 transition-all duration-200"
+                        href="https://apps.mosq.io"
+                        className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gradient-gold text-white hover:opacity-90 transition-all duration-200"
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Dapat Website Masjid Percuma
@@ -209,7 +210,7 @@ export default function Header() {
                 className={`
                     md:hidden
                     fixed inset-0 -z-10
-                    bg-black/60 backdrop-blur-sm
+                    bg-grey-900/30 backdrop-blur-sm
                     transition-opacity duration-300
                     ${mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
                 `}

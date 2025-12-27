@@ -26,8 +26,8 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                 <div
                     key={index}
                     className={`glass-card rounded-2xl border transition-all duration-300 overflow-hidden ${openIndex === index
-                        ? "border-gold/30 bg-white/5"
-                        : "border-white/5 hover:border-white/10"
+                        ? "border-gold/50 bg-zinc-50"
+                        : "border-zinc-200 hover:border-zinc-300"
                         }`}
                 >
                     <button
@@ -35,13 +35,13 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                         className="w-full text-left px-6 py-5 flex items-center justify-between group"
                         aria-expanded={openIndex === index}
                     >
-                        <h3 className="text-lg font-bold text-white group-hover:text-gold transition-colors">
+                        <h3 className="text-lg font-bold text-grey-900 group-hover:text-gold transition-colors">
                             {item.question}
                         </h3>
                         <span
-                            className={`ml-4 p-2 rounded-full border border-white/10 bg-white/5 transition-transform duration-300 ${openIndex === index
-                                ? "rotate-180 text-gold border-gold/30"
-                                : "text-gray-400 group-hover:text-white"
+                            className={`ml-4 p-2 rounded-full border border-zinc-200 bg-zinc-50 transition-transform duration-300 ${openIndex === index
+                                ? "rotate-180 text-gold border-gold/50"
+                                : "text-grey-400 group-hover:text-grey-900"
                                 }`}
                         >
                             <ChevronDown className="w-5 h-5" />
@@ -53,7 +53,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                             : "max-h-0 opacity-0"
                             }`}
                     >
-                        <div className="px-6 pb-6 text-gray-400 leading-relaxed font-sans">
+                        <div className="px-6 pb-6 text-grey-600 leading-relaxed font-sans">
                             {item.answer}
                         </div>
                     </div>

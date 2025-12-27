@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function DaftarPage() {
     return (
-        <div className="bg-black min-h-screen">
+        <div className="bg-white min-h-screen">
             <Header />
             <main>
                 <PageBanner

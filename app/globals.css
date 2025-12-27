@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  /* Core Colors */
-  --background: #050505;
-  --foreground: #ffffff;
+  /* Core Colors - Light Theme */
+  --background: #ffffff;
+  --foreground: #111111;
 
   /* Gold Palette - Premium & Metallic */
   --gold: #C9A24D;
   --gold-light: #E5C573;
   --gold-dark: #9F7F35;
+
+  /* Neutral Palette */
+  --grey-50: #fafafa;
+  --grey-100: #f5f5f5;
+  --grey-200: #e5e5e5;
+  --grey-300: #d4d4d4;
+  --grey-400: #a3a3a3;
+  --grey-500: #737373;
+  --grey-600: #525252;
+  --grey-700: #404040;
+  --grey-800: #262626;
+  --grey-900: #171717;
 
   /* Font Variables mapped from next/font */
   --font-inter: var(--font-inter);
@@ -16,13 +28,13 @@
 
   /* SaaS Gradients */
   --gradient-gold: linear-gradient(135deg, #E5C573 0%, #C9A24D 100%);
-  --gradient-gold-text: linear-gradient(to right, #FDE68A, #CA8A04);
-  --gradient-dark: linear-gradient(to bottom, #050505, #0A0A0A);
+  --gradient-gold-text: linear-gradient(to right, #B8860B, #9F7F35);
+  --gradient-light: linear-gradient(to bottom, #ffffff, #fafafa);
 
-  /* UI Elements */
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --card-hover: rgba(255, 255, 255, 0.06);
+  /* UI Elements - Light Theme */
+  --card-bg: rgba(0, 0, 0, 0.02);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover: rgba(0, 0, 0, 0.04);
 }
 
 @theme inline {
@@ -32,6 +44,17 @@
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
+
+  --color-grey-50: var(--grey-50);
+  --color-grey-100: var(--grey-100);
+  --color-grey-200: var(--grey-200);
+  --color-grey-300: var(--grey-300);
+  --color-grey-400: var(--grey-400);
+  --color-grey-500: var(--grey-500);
+  --color-grey-600: var(--grey-600);
+  --color-grey-700: var(--grey-700);
+  --color-grey-800: var(--grey-800);
+  --color-grey-900: var(--grey-900);
 
   /* Typography Configuration */
   --font-display: var(--font-sora), system-ui, sans-serif;
@@ -86,34 +109,32 @@
 
   /* Headings: Sora (Display) */
   h1 {
-    @apply font-display font-bold text-5xl md:text-7xl leading-[1.15] tracking-[0.01em];
+    @apply font-display font-bold text-5xl md:text-7xl leading-[1.15] tracking-[0.01em] text-grey-900;
   }
 
   h2 {
-    @apply font-display font-bold text-4xl md:text-5xl leading-[1.15];
+    @apply font-display font-bold text-4xl md:text-5xl leading-[1.15] text-grey-900;
   }
 
   h3 {
-    @apply font-display font-semibold text-2xl md:text-3xl leading-[1.15];
+    @apply font-display font-semibold text-2xl md:text-3xl leading-[1.15] text-grey-800;
   }
 
   h4 {
-    @apply font-display font-semibold text-xl md:text-2xl leading-[1.15];
+    @apply font-display font-semibold text-xl md:text-2xl leading-[1.15] text-grey-800;
   }
 
   /* Body: Inter (Sans) */
   p {
-    @apply font-sans text-base text-gray-400 max-w-[65ch];
+    @apply font-sans text-base text-grey-600 max-w-[65ch];
     line-height: 1.75;
-    /* Strict rule: 1.6 - 1.75 */
     margin-bottom: 1.5rem;
-    /* Strict rule: 1.25 - 1.5rem */
   }
 }
 
 /* Utilities */
-.text-gradient-white {
-  background: linear-gradient(to bottom, #FFFFFF, #A3A3A3);
+.text-gradient-dark {
+  background: linear-gradient(to bottom, #171717, #404040);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -124,23 +145,21 @@
 }
 
 .glass-panel {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border: 1px solid var(--card-border);
 }
 
 .glass-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: #ffffff;
+  border: 1px solid var(--grey-200);
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(201, 162, 77, 0.3);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px -8px rgba(201, 162, 77, 0.15);
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 }
 
 /* Custom Scrollbar */
@@ -149,16 +168,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--grey-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--grey-300);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background: var(--grey-400);
 }
 
 /* ====================================
@@ -209,29 +228,12 @@
   animation-delay: 0.8s;
 }
 
-/* Text shimmer effect for gold gradient text */
+/* Text gradient gold - clean static version for light theme */
 .text-gradient-gold {
-  background: linear-gradient(90deg,
-      #FDE68A 0%,
-      #C9A24D 25%,
-      #E5C573 50%,
-      #C9A24D 75%,
-      #FDE68A 100%);
-  background-size: 200% auto;
+  background: linear-gradient(90deg, #B8860B 0%, #C9A24D 50%, #9F7F35 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 3s linear infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 200% center;
-  }
-
-  100% {
-    background-position: -200% center;
-  }
 }
 
 /* Fade in from bottom animation */

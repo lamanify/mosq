@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function KenapaPerluPage() {
     return (
-        <div className="bg-black min-h-screen">
+        <div className="bg-white min-h-screen">
             <Header />
             <main>
                 <PageBanner
@@ -26,7 +26,7 @@ export default function KenapaPerluPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                             {/* Feature 1 */}
                             <div className="reveal-on-load stagger-1 glass-card p-10 rounded-2xl">
-                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20">
+                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-zinc-200">
                                     <svg
                                         className="w-7 h-7"
                                         fill="none"
@@ -41,10 +41,10 @@ export default function KenapaPerluPage() {
                                         />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">
+                                <h3 className="text-2xl font-bold text-grey-900 mb-4">
                                     Pusat Informasi Setempat
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed font-sans mb-0">
+                                <p className="text-grey-600 leading-relaxed font-sans mb-0">
                                     Jemaah tidak perlu lagi tertanya-tanya tentang waktu solat,
                                     kuliah, atau program terkini. Segala maklumat boleh diakses di
                                     hujung jari, bila-bila masa.
@@ -53,7 +53,7 @@ export default function KenapaPerluPage() {
 
                             {/* Feature 2 */}
                             <div className="reveal-on-load stagger-2 glass-card p-10 rounded-2xl">
-                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20">
+                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-zinc-200">
                                     <svg
                                         className="w-7 h-7"
                                         fill="none"
@@ -68,10 +68,10 @@ export default function KenapaPerluPage() {
                                         />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">
+                                <h3 className="text-2xl font-bold text-grey-900 mb-4">
                                     Kemudahan Infaq & Derma
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed font-sans mb-0">
+                                <p className="text-grey-600 leading-relaxed font-sans mb-0">
                                     Paparkan akaun bank masjid atau QR Pay untuk memudahkan orang
                                     ramai menyumbang secara terus tanpa ragu-ragu tentang
                                     kesahihan nombor akaun.
@@ -80,7 +80,7 @@ export default function KenapaPerluPage() {
 
                             {/* Feature 3 */}
                             <div className="reveal-on-load stagger-3 glass-card p-10 rounded-2xl">
-                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20">
+                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-zinc-200">
                                     <svg
                                         className="w-7 h-7"
                                         fill="none"
@@ -95,10 +95,10 @@ export default function KenapaPerluPage() {
                                         />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">
+                                <h3 className="text-2xl font-bold text-grey-900 mb-4">
                                     Kredibiliti & Imej Profesional
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed font-sans mb-0">
+                                <p className="text-grey-600 leading-relaxed font-sans mb-0">
                                     Tingkatkan keyakinan orang awam terhadap pengurusan masjid.
                                     Masjid dengan laman web rasmi dilihat lebih telus dan cekap.
                                 </p>
@@ -106,7 +106,7 @@ export default function KenapaPerluPage() {
 
                             {/* Feature 4 */}
                             <div className="reveal-on-load stagger-4 glass-card p-10 rounded-2xl">
-                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-gold/20">
+                                <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 border border-zinc-200">
                                     <svg
                                         className="w-7 h-7"
                                         fill="none"
@@ -121,10 +121,10 @@ export default function KenapaPerluPage() {
                                         />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">
+                                <h3 className="text-2xl font-bold text-grey-900 mb-4">
                                     Tarik Minat Golongan Muda
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed font-sans mb-0">
+                                <p className="text-grey-600 leading-relaxed font-sans mb-0">
                                     Generasi muda lebih selesa mencari maklumat secara dalam talian.
                                     Dekati mereka melalui medium yang mereka guna setiap hari.
                                 </p>
@@ -132,11 +132,11 @@ export default function KenapaPerluPage() {
                         </div>
 
                         {/* Who Behind MOSQ */}
-                        <div className="reveal-on-load stagger-1 mt-32 max-w-2xl mx-auto border-t border-white/5 pt-16">
-                            <h2 className="text-2xl font-bold text-white mb-8 text-center">
+                        <div className="reveal-on-load stagger-1 mt-32 max-w-2xl mx-auto border-t border-zinc-200 pt-16">
+                            <h2 className="text-2xl font-bold text-grey-900 mb-8 text-center">
                                 Siapa Di Sebalik MOSQ?
                             </h2>
-                            <div className="space-y-6 text-gray-400 font-sans leading-relaxed text-center italic opacity-80">
+                            <div className="space-y-6 text-grey-600 font-sans leading-relaxed text-center italic opacity-80">
                                 <p>
                                     MOSQ dibangunkan oleh pasukan profesional web yang juga mengendalikan Lamanify, sebuah agensi reka bentuk web dalam sektor kesihatan.
                                 </p>
@@ -148,7 +148,7 @@ export default function KenapaPerluPage() {
 
                         <div className="mt-24 text-center reveal-on-load stagger-2">
                             <Link
-                                href="/daftar"
+                                href="https://apps.mosq.io"
                                 className="inline-flex items-center justify-center rounded-xl bg-gradient-gold text-black px-10 py-5 text-lg font-bold transition-all shadow-[0_0_30px_rgba(201,162,77,0.4)] hover:scale-105"
                             >
                                 Dapat Website Masjid Percuma

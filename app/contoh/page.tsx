@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContohPage() {
     return (
-        <div className="bg-black min-h-screen">
+        <div className="bg-white min-h-screen">
             <Header />
             <main>
                 <PageBanner
@@ -28,9 +28,9 @@ export default function ContohPage() {
                             {/* Preview Image / Mockup */}
                             <div className="relative group reveal-on-load stagger-1">
                                 <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-orange-500/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
-                                <div className="relative bg-[#111] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                                <div className="relative bg-zinc-100 rounded-2xl overflow-hidden border border-zinc-200 shadow-2xl">
                                     {/* Snapshot of the demo */}
-                                    <div className="aspect-[16/10] bg-gray-800 relative flex items-center justify-center group overflow-hidden">
+                                    <div className="aspect-[16/10] bg-zinc-200 relative flex items-center justify-center group overflow-hidden">
                                         <Image
                                             src="https://res.cloudinary.com/lamanify/image/upload/v1766568604/Screenshot_5_uxpmgd.webp"
                                             alt="Paparan Demo Masjid Al-Hidayah"
@@ -54,8 +54,8 @@ export default function ContohPage() {
                             <div className="reveal-on-load stagger-2">
                                 <div className="mb-8">
                                     <span className="text-gold font-bold tracking-widest text-sm uppercase font-mono">Ciri-ciri Utama</span>
-                                    <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6 tracking-tight">Lengkap & Profesional</h2>
-                                    <p className="text-gray-400 text-lg leading-relaxed font-sans">
+                                    <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mt-2 mb-6 tracking-tight">Lengkap & Profesional</h2>
+                                    <p className="text-grey-600 text-lg leading-relaxed font-sans">
                                         Setiap laman web masjid dilengkapi dengan halaman-halaman penting yang tersusun rapi dan mudah dilayari oleh jemaah.
                                     </p>
                                 </div>
@@ -74,8 +74,8 @@ export default function ContohPage() {
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h4 className="text-white font-bold">{item.title}</h4>
-                                                <p className="text-sm text-gray-400 font-sans">{item.desc}</p>
+                                                <h4 className="text-grey-900 font-bold">{item.title}</h4>
+                                                <p className="text-sm text-grey-600 font-sans">{item.desc}</p>
                                             </div>
                                         </div>
                                     ))}
