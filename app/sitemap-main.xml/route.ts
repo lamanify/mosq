@@ -8,7 +8,6 @@ const PROTOCOL = 'https';
 const MAIN_PAGES = [
     '',
     '/cara-kerja',
-    '/daftar',
     '/kenapa-perlu',
     '/senarai-masjid',
     '/siapa-kami',

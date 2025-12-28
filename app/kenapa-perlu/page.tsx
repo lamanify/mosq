@@ -148,7 +148,7 @@ export default function KenapaPerluPage() {
 
                         <div className="mt-24 text-center reveal-on-load stagger-2">
                             <Link
-                                href="https://apps.mosq.io"
+                                href="https://app.mosq.io/"
                                 className="inline-flex items-center justify-center rounded-xl bg-gradient-gold text-black px-10 py-5 text-lg font-bold transition-all shadow-[0_0_30px_rgba(201,162,77,0.4)] hover:scale-105"
                             >
                                 Dapat Website Masjid Percuma

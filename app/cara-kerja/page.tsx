@@ -161,7 +161,7 @@ export default function CaraKerjaPage() {
                         </p>
                         <div className="inline-block relative group reveal-on-load stagger-3">
                             <div className="absolute -inset-1 bg-gradient-to-r from-gold to-yellow-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                            <LinkButton href="https://apps.mosq.io" size="lg" className="relative bg-gradient-gold text-black font-bold px-8 py-4 text-lg border-none shadow-[0_0_30px_rgba(201,162,77,0.4)]">
+                            <LinkButton href="https://app.mosq.io/" size="lg" className="relative bg-gradient-gold text-black font-bold px-8 py-4 text-lg border-none shadow-[0_0_30px_rgba(201,162,77,0.4)]">
                                 Dapat Website Masjid Percuma
                             </LinkButton>
                         </div>

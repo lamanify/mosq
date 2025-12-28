@@ -126,7 +126,7 @@ export default function HomePage() {
             <div className="reveal-on-load stagger-4 flex flex-col items-center gap-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <LinkButton
-                  href="https://apps.mosq.io"
+                  href="https://app.mosq.io/"
                   className="bg-gradient-gold text-white hover:opacity-90 border-none font-bold px-8 py-4 text-lg rounded-xl shadow-lg transition-all hover:scale-105"
                 >
                   Dapat Website Masjid Percuma
@@ -146,16 +146,15 @@ export default function HomePage() {
             </div>
 
             {/* Platform Preview / Mockup */}
-            <div className="mt-20 relative mx-auto max-w-5xl z-20 -mb-[30px]">
-              <div className="absolute inset-0 bg-gold/10 blur-[60px] rounded-full opacity-30" />
-              <div className="relative bg-white border border-grey-200 rounded-2xl p-2 shadow-xl">
+            <div className="mt-20 relative mx-auto max-w-5xl z-20 -mb-[30px] group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-gold/10 to-transparent rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="relative bg-white border border-grey-200 rounded-2xl p-1.5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-transform duration-500 hover:-translate-y-2">
                 <div className="bg-grey-50 rounded-xl overflow-hidden border border-grey-100 aspect-[16/9] relative">
-                  {/* Decorative Mockup Content */}
                   <Image
-                    src="https://res.cloudinary.com/lamanify/image/upload/v1766570169/Gemini_Generated_Image_3nvw5l3nvw5l3nvw_ly8efk.webp"
+                    src="https://res.cloudinary.com/debi0yfq9/image/upload/v1766905723/Screenshot_7_a7eutg.webp"
                     alt="MOSQ Platform Dashboard Preview"
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                     priority
                   />
                 </div>
@@ -258,7 +257,7 @@ export default function HomePage() {
               Sertai beratus masjid lain yang telah memanfaatkan platform MOSQ untuk kemudahan jemaah.
             </p>
             <div className="flex justify-center">
-              <LinkButton href="https://apps.mosq.io" className="bg-gradient-gold text-white hover:opacity-90 px-10 py-5 text-lg font-bold rounded-xl shadow-lg">
+              <LinkButton href="https://app.mosq.io/" className="bg-gradient-gold text-white hover:opacity-90 px-10 py-5 text-lg font-bold rounded-xl shadow-lg">
                 Dapat Website Masjid Percuma
               </LinkButton>
             </div>

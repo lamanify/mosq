@@ -27,21 +27,22 @@ export default function ContohPage() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                             {/* Preview Image / Mockup */}
                             <div className="relative group reveal-on-load stagger-1">
-                                <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-orange-500/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
-                                <div className="relative bg-zinc-100 rounded-2xl overflow-hidden border border-zinc-200 shadow-2xl">
+                                <div className="absolute -inset-4 bg-gradient-to-r from-gold/10 to-transparent rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                <div className="relative bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-transform duration-500 group-hover:-translate-y-2">
                                     {/* Snapshot of the demo */}
-                                    <div className="aspect-[16/10] bg-zinc-200 relative flex items-center justify-center group overflow-hidden">
+                                    <div className="aspect-[16/10] bg-zinc-50 relative flex items-center justify-center overflow-hidden">
                                         <Image
-                                            src="https://res.cloudinary.com/lamanify/image/upload/v1766568604/Screenshot_5_uxpmgd.webp"
+                                            src="https://res.cloudinary.com/debi0yfq9/image/upload/v1766905723/Screenshot_7_a7eutg.webp"
                                             alt="Paparan Demo Masjid Al-Hidayah"
                                             fill
-                                            className="object-contain group-hover:scale-105 transition-transform duration-500"
+                                            className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                                            priority
                                         />
 
-                                        <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
+                                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]">
                                             <LinkButton
-                                                href="/contoh/masjid-al-hidayah-shah-alam"
-                                                className="bg-gradient-gold text-black hover:opacity-90 font-bold border-none"
+                                                href="https://masjid-shah-alam.mosq.io/"
+                                                className="bg-gradient-gold text-black hover:opacity-90 font-bold border-none shadow-xl"
                                             >
                                                 Lawati Demo
                                             </LinkButton>
@@ -83,7 +84,7 @@ export default function ContohPage() {
 
                                 <div className="mt-10 reveal-on-load stagger-5">
                                     <LinkButton
-                                        href="/contoh/masjid-al-hidayah-shah-alam"
+                                        href="https://masjid-shah-alam.mosq.io/"
                                         className="bg-gradient-gold text-black font-bold hover:opacity-90 border-none transition-all"
                                     >
                                         Lihat Demo Penuh &rarr;

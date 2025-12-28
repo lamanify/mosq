@@ -108,8 +108,8 @@ export default function Header() {
                 {/* CTA Button & Mobile Toggle */}
                 <div className="flex items-center gap-4">
                     <Link
-                        href="https://apps.mosq.io"
-                        className="inline-flex items-center justify-center rounded-lg bg-gradient-gold hover:opacity-90 text-white border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-md"
+                        href="https://app.mosq.io/"
+                        className="hidden md:inline-flex items-center justify-center rounded-lg bg-gradient-gold hover:opacity-90 text-white border border-transparent px-6 py-2 text-sm font-bold transition-all shadow-md"
                     >
                         Dapat Website Masjid Percuma
                     </Link>
@@ -196,7 +196,7 @@ export default function Header() {
 
                     {/* Mobile CTA */}
                     <Link
-                        href="https://apps.mosq.io"
+                        href="https://app.mosq.io/"
                         className="block py-3 px-4 rounded-xl text-base font-bold text-center bg-gradient-gold text-white hover:opacity-90 transition-all duration-200"
                         onClick={() => setMobileMenuOpen(false)}
                     >

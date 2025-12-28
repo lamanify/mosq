@@ -54,8 +54,8 @@ export default function SoalanLazimPage() {
                                         answer: (
                                             <>
                                                 Anda boleh mendaftar minat dengan mengisi borang di halaman{" "}
-                                                <Link href="https://apps.mosq.io" className="text-gold hover:underline">
-                                                    https://apps.mosq.io
+                                                <Link href="https://app.mosq.io/" className="text-gold hover:underline">
+                                                    https://app.mosq.io/
                                                 </Link>
                                                 . Kami akan menghubungi anda untuk langkah seterusnya.
                                             </>
@@ -145,7 +145,7 @@ export default function SoalanLazimPage() {
                                     name: "Bagaimana cara dapatkan?",
                                     acceptedAnswer: {
                                         "@type": "Answer",
-                                        text: "Anda boleh mendaftar minat dengan mengisi borang di halaman https://apps.mosq.io. Kami akan menghubungi anda untuk langkah seterusnya.",
+                                        text: "Anda boleh mendaftar minat dengan mengisi borang di halaman https://app.mosq.io/. Kami akan menghubungi anda untuk langkah seterusnya.",
                                     },
                                 },
                             ],

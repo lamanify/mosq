@@ -9,8 +9,8 @@ const footerLinks = {
     ],
     support: [
         { href: "/soalan-lazim", label: "Soalan Lazim" },
-        { href: "https://apps.mosq.io", label: "Daftar Masjid" },
-        { href: "https://apps.mosq.io", label: "Hubungi Kami" },
+        { href: "https://app.mosq.io/", label: "Daftar Masjid" },
+        { href: "https://app.mosq.io/", label: "Hubungi Kami" },
     ]
 };
 
