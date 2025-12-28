@@ -6,17 +6,39 @@ export const revalidate = 0; // No cache for health check
 export async function GET() {
     try {
         const start = Date.now();
-        const mosques = await getPublishedMosques();
 
-        // Simple check: if we got an array (even empty), connection is okay.
-        // In real scenario, we might want to check if sitemap is reachable, 
-        // but here we just return the flag as 'true' since we serve it.
+        // Import supabase components to check their state
+        const { supabaseUrl, supabaseAdmin, supabase } = await import('@/lib/supabase');
+
+        let fetchError = null;
+        let queryResult = null;
+
+        try {
+            const { data, error } = await supabaseAdmin
+                .from('mosques')
+                .select('slug')
+                .eq('is_published', true)
+                .limit(1);
+
+            if (error) fetchError = error;
+            queryResult = data;
+        } catch (e) {
+            fetchError = e instanceof Error ? e.message : String(e);
+        }
+
+        const mosques = await getPublishedMosques();
 
         return NextResponse.json({
             publishedMosques: mosques.length,
-            sitemapAccessible: true, // We assume it's true if this route works, or we could fetch it.
+            sitemapAccessible: true,
             lastUpdated: new Date().toISOString(),
-            latency: `${Date.now() - start}ms`
+            latency: `${Date.now() - start}ms`,
+            diagnostics: {
+                supabaseUrl: supabaseUrl ? `${supabaseUrl.substring(0, 12)}...` : 'MISSING',
+                usingServiceRole: supabaseAdmin !== supabase,
+                fetchError,
+                sampleData: queryResult
+            }
         });
     } catch (error) {
         return NextResponse.json({
