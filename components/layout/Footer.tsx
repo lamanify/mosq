@@ -92,8 +92,20 @@ export default function Footer() {
                             sebagai sumbangan khidmat masyarakat.
                         </p>
                     </div>
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-col items-center gap-2">
                         <span className="text-[10px] text-grey-400 uppercase tracking-[0.2em] font-bold">Inisiatif Kebajikan</span>
+                        <a
+                            href="https://www.lamanify.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-all hover:opacity-80"
+                        >
+                            <img
+                                src="https://res.cloudinary.com/debi0yfq9/image/upload/v1766961235/Lamanify_Official_Logo_pyzh6y.png"
+                                alt="Lamanify Logo"
+                                className="h-6 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                            />
+                        </a>
                     </div>
                 </div>
             </div>

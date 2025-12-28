@@ -233,12 +233,14 @@ export default function HomePage() {
 
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-gold/10 to-amber-500/10 blur-2xl opacity-30" />
-                <div className="relative bg-white border border-grey-200 rounded-2xl p-8 aspect-square flex items-center justify-center shadow-lg">
-                  <div className="text-center">
-                    <div className="text-6xl font-bold text-grey-900 mb-2">3~7</div>
-                    <div className="text-gold uppercase tracking-widest text-sm">Hari Bekerja</div>
-                    <p className="text-grey-500 text-xs mt-4 max-w-[200px] mx-auto">Tempoh siap sepenuhnya selepas pengesahan data</p>
-                  </div>
+                <div className="relative bg-white border border-grey-200 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="https://res.cloudinary.com/debi0yfq9/image/upload/v1766961140/Screenshot_8_qw0oa4.webp"
+                    alt="Proses Digitalisasi Masjid"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>
