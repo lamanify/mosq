@@ -79,14 +79,20 @@ export async function getPublishedMosques() {
         const { supabaseAdmin } = await import('./supabase');
 
         const { data, error } = await supabaseAdmin
-            .from('public_mosques')
+            .from('mosques')
             .select('slug, name')
-            .eq('status', 'published')
-            .order('published_at', { ascending: false });
+            .eq('is_published', true)
+            .order('created_at', { ascending: false });
 
         if (error) {
-            console.error('Error fetching published mosques:', error);
+            console.error('Error fetching published mosques from Supabase:', error);
             return [];
+        }
+
+        if (!data || data.length === 0) {
+            console.warn('No published mosques found in Supabase table "mosques".');
+        } else {
+            console.log(`Successfully fetched ${data.length} published mosques.`);
         }
 
         return data || [];
